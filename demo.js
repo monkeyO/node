@@ -7,5 +7,5 @@ class person{
         return `${this.name}的年龄是：${this.age}`;
     }
 }
-console.log("12");
+console.log("122112");
 module.exports = person;
