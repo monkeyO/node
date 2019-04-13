@@ -7,7 +7,7 @@ const goods = require('./routes/good');
 
 const demo = require('./demo.js');
 
-let Person = new demo("小王小李1",11);
+let Person = new demo("小王小李",11);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
