@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>初美代理系统</title>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+		<meta http-equiv='content-script-type' content='text/javascript' />
+		<meta http-equiv='content-style-type' content='text/css' />
+		<meta http-equiv='content-language' content='zh' />
+		<link rel="stylesheet" type="text/css" href="../../bootstrap-3.3.7/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/global.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/layout.css" />
+		<link rel="stylesheet" type="text/css" href="../../bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css" />
+	</head>
+	<body>
+		<div id="main">
+			<h2 class="c77bfaf font22 content-title">分红模板</h2>
+			<!--表格-->
+			<div id="table-content" class="borderRadius5 public-table">
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<table class="table table-hover table-bordered">
+						<thead>
+							<tr>
+								<th style="width: 120px;">分红模板</th>
+								<th>分红比例</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									一级分红模板
+								</td>
+								<td>
+									15%
+								</td>
+								<td>
+									<button type="button" class="btn btn-success" onclick="makeFirst(1)">编辑</button>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									二级分红模板
+								</td>
+								<td>
+									一级团长4%，
+									二级团长11%
+								</td>
+								<td>
+									<button type="button" class="btn btn-success" onclick="makeSecond(2)">编辑</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!--content end-->
+			<!--二级分红-->
+			<div id="modal" class="modal fade " tabindex="-1" role="dialog">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title">二级分红%</h4>
+						</div>
+						<div class="modal-body">
+							<form>
+								<div class="form-group">
+									<label for="yiji" style="margin-bottom: 5px;">一级团长比例</label>
+									<input type="number" id="yiji" class="form-control" placeholder="请输入分红比例">
+									<p style='color:red; margin-bottom:5px;'>*该笔接龙的交易额的百分比</p>
+								</div>
+								<div class="form-group">
+									<label for="erji" style="margin-bottom: 5px;">二级团长比例</label>
+									<input type="number" id="erji" class="form-control" placeholder="请输入分红比例">
+									<p style='color:red; margin-bottom:5px;'>*该笔接龙的交易额的百分比</p>
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+							<button type="button" class="btn btn-primary" onclick="makeOk()">保存</button>
+						</div>
+					</div><!-- /.modal-content -->
+				</div><!-- /.modal-dialog -->
+			</div>
+		</div>
+	</body>
+	<script type="application/javascript" src="../../js/jquery.min.js"></script>
+	<script type="application/javascript" src="../../js/comment.js"></script>
+	<script type="application/javascript" src="../../bootstrap-3.3.7/js/bootstrap.min.js"></script>
+	<script type="application/javascript" src="../../js/bootbox.all.min.js"></script>
+	<script type="application/javascript">
+		var secondID;
+		<!--一级分红模块-->
+		function makeFirst(id) {
+			bootbox.prompt({
+				title: "设置一级分红比例(%)",
+				inputType: 'number',
+				message: "<p style='color:red; margin-bottom:5px;'>*该笔接龙的交易额的百分比</p>",
+				buttons: {
+					confirm: {
+						label: '保存',
+						className: 'btn-primary'
+					},
+					cancel: {
+						label: '关闭',
+						className: 'btn-default'
+					}
+				},
+				callback: function(result) {
+					console.log(result);
+				}
+			});
+		}
+		<!--二级分红模板-->
+		function makeSecond(id) {
+			secondID = id;
+			$("#modal").modal();
+		}
+		<!--二级分红确定-->
+		function makeOk() {
+			$("#modal").modal('hide');
+		}
+	</script>
+</html>

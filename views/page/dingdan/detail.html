@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>初美代理系统</title>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+		<meta http-equiv='content-script-type' content='text/javascript' />
+		<meta http-equiv='content-style-type' content='text/css' />
+		<meta http-equiv='content-language' content='zh' />
+		<link rel="stylesheet" type="text/css" href="../../bootstrap-3.3.7/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/global.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/layout.css" />
+		<link rel="stylesheet" type="text/css" href="../../bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css" />
+	</head>
+	<body>
+
+		<div id="main">
+			<h2 class="c77bfaf font22 content-title">订单详情</h2>
+			<div class="clearfix borderRadius5 public-main" id="order-detail">
+				<div class="order-process clearfix">
+					<div class="node ready">
+						<i class="node-icon icon-start"></i>
+						<ul>
+							<li class="txt1">&nbsp;</li>
+							<li class="txt2">提交订单</li>
+							<li class="txt3">2019-03-10<br>18:27:49</li>
+						</ul>
+					</div>
+
+					<div class="proce">
+						<ul>
+							<li class="txt1"></li>
+						</ul>
+					</div>
+
+					<div class="node ready">
+						<i class="node-icon icon-being"></i>
+						<ul>
+							<li class="txt1">&nbsp;</li>
+							<li class="txt2">正在接龙</li>
+							<li class="txt3">2019-03-10<br>18:27:49</li>
+						</ul>
+					</div>
+
+					<div class="proce">
+						<ul>
+							<li class="txt1"></li>
+						</ul>
+					</div>
+
+					<div class="node">
+						<i class="node-icon icon-pending"></i>
+						<ul>
+							<li class="txt1">&nbsp;</li>
+							<li class="txt2">待发货</li>
+							<li class="txt3">2019-03-10<br>18:27:49</li>
+						</ul>
+					</div>
+
+					<div class="proce">
+						<ul>
+							<li class="txt1"></li>
+						</ul>
+					</div>
+
+					<div class="node ready">
+						<i class="node-icon icon-sent"></i>
+						<ul>
+							<li class="txt1">&nbsp;</li>
+							<li class="txt2">待发货</li>
+							<li class="txt3">2019-03-10<br>18:27:49</li>
+						</ul>
+					</div>
+
+					<div class="proce">
+						<ul>
+							<li class="txt1"></li>
+						</ul>
+					</div>
+
+					<div class="node ">
+						<i class="node-icon icon-out"></i>
+						<ul>
+							<li class="txt1">&nbsp;</li>
+							<li class="txt2">已完成</li>
+							<li class="txt3">2019-03-10<br>18:27:49</li>
+						</ul>
+					</div>
+				</div>
+				<!--订单信息-->
+				<table class="table table-bordered table-hover" id="order-detail-info">
+					<tr>
+						<td class="order-start">
+							<p class="detail-title">
+								订单信息：
+							</p>
+							<ul>
+								<li>
+									<p>订单编号：</p>
+									<p>E20170905091701051567222</p>
+								</li>
+								<li>
+									<p>收货信息：</p>
+									<p>广东省 中山市 阜沙镇 万通豪庭旁边的鸿业驾校, 陈欣然, 13829237869</p>
+								</li>
+								<li>
+									<p>团长信息：</p>
+									<p>团长陈欣然 18826382267</p>
+								</li>
+							</ul>
+						</td>
+						<td>
+							<p class="detail-title">
+								订单状态：
+							</p>
+							<ul>
+								<li>
+									<p>交易完成</p>
+								</li>
+							</ul>
+						</td>
+						<td>
+							<p class="detail-title">
+								备注：
+							</p>
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="请输入你的备注">
+							</div>
+						</td>
+					</tr>
+				</table>
+				<!--商品-->
+				<table class="table table-bordered" id="order-product">
+					<thead>
+						<tr>
+							<th>商品</th>
+							<th>价格</th>
+							<th>数量</th>
+							<th>小计</th>
+							<th>状态</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<img src="../../img/product.jpg">
+								玫瑰花—红色
+							</td>
+							<td>
+								¥9.9
+							</td>
+							<td>
+								100
+							</td>
+							<td>
+								¥9.9
+							</td>
+							<td>
+								已完成
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<p class="order-total">订单共2件商品，总计：<span>¥1189</span></p>
+				<div class="logistics clearfix">
+					<div class="col-lg-6">
+						<p class="detail-title">
+							物流详情：
+						</p>
+						<ul>
+							<li>
+								<p>顺丰速运</p>
+							</li>
+							<li>
+								<p>运单号：5272728229929</p>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-6">
+						<div class="log-progress">
+							<ul>
+								<li class="progress-info clearfix ready">
+									<span class="progress-btn"></span>
+									<div>
+										<p class="time">2017-09-07 10:58:26</p>
+										<p class="status">已签收,感谢使用顺丰,期待再次为您服务</p>
+									</div>
+								</li>
+								<li class="progress-line done">
+								</li>
+								<li class="progress-info clearfix">
+									<span class="progress-btn"></span>
+									<div>
+										<p class="time">2017-09-08 10:58:26</p>
+										<p class="status">顺丰准备发往【湖北集散中心】</p>
+									</div>
+								</li>
+								<li class="progress-line">
+								</li>
+								<li class="progress-info clearfix">
+									<span class="progress-btn"></span>
+									<div>
+										<p class="time">2017-09-09 10:58:26</p>
+										<p class="status">顺丰速运已收取快件</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

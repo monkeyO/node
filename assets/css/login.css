@@ -1,0 +1,48 @@
+#login{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/login_bg.jpg);
+	background-size: cover;
+	background-position: center;
+}
+#login .login-logo{
+	position: absolute;
+	left: 100px;
+	top: 50%;
+	width: 441px;
+	height: 156px;
+	transform: translateY(-50%);
+}
+
+#login .login-box{
+    position: absolute;
+    right: 200px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 380px;
+	padding: 10px;
+	background-color:rgba(255,255,255,.2);
+}
+#login .login-box .login-content{
+	background: #FFFFFF;
+	padding: 45px 38px;
+}
+#login .login-box .login-header{
+	font-size: 20px;
+    padding-bottom: 15px;
+	border-bottom:1px solid  #D2D2D2;
+}
+#login .login-box .login-form{
+	margin-top: 25px;
+}
+#login .login-box .login-form .input-group,#login .login-box .login-form{
+	margin-bottom: 15px;
+}
+#login .msg{
+	color: #898989;
+	text-align: center;
+}
+#login .msg a{
+  text-decoration: underline;
+}

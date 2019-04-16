@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>{{title}}</title>
+		<meta name="keywords" content="" />
+		<meta name="description" content="凡蔻官方网站" />
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
+		<meta http-equiv='content-script-type' content='text/javascript'/>
+		<meta http-equiv='content-style-type' content='text/css'/>
+		<meta http-equiv='content-language' content='zh'/>
+		<link rel="stylesheet" type="text/css" href="/bootstrap-3.3.7/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/global.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/layout.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/login.css"/>
+	</head>
+	<body>
+		<div id="container">
+			<div id="login">
+			    <img src="/img/login_logo.png" class="login-logo"/>
+				<div class="login-box">
+					<div class="login-content">
+						<div class="c77bfaf login-header" id="name">
+							用户登录
+						</div>
+						<div class="login-form">
+							<div class="input-group">
+								<span class="input-group-addon">
+									<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+								</span>
+								<input type="text" class="form-control" placeholder="请输入用户名">
+							</div>
+							<div class="input-group">
+								<span class="input-group-addon">
+									<span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
+								</span>
+								<input type="text" class="form-control" placeholder="密码">
+							</div>
+							<button type="button" class="btn btn-success btn-block bg6EB8A7" onclick="login()">登录</button>
+						</div>
+						<p class="msg">还没有账号?，<a>立即注册</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/bootstrap-3.3.7/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/js/bootbox.all.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="application/javascript">
+			 function login(){
+				 bootbox.confirm({
+				 	message: "确定登录?",
+				 	buttons: {
+				 		confirm: {
+				 			label: '确定',
+				 			className: 'btn-success'
+				 		},
+				 		cancel: {
+				 			label: '取消',
+				 			className: 'btn-danger'
+				 		}
+				 	},
+				 	callback: function(result) {
+				 		console.log('确定!');
+				 	}
+				 });
+			 }
+		</script>
+	</body>
+</html>

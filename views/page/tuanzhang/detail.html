@@ -1,0 +1,152 @@
+<strong><!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>初美代理系统</title>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+		<meta http-equiv='content-script-type' content='text/javascript' />
+		<meta http-equiv='content-style-type' content='text/css' />
+		<meta http-equiv='content-language' content='zh' />
+		<link rel="stylesheet" type="text/css" href="../../bootstrap-3.3.7/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/global.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/layout.css" />
+		<link rel="stylesheet" type="text/css" href="../../bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/fileinput.css" />
+	</head>
+	<body>
+					<div id="main">
+						<h2 class="c77bfaf font22 content-title">团长详情</h2>
+						<div class="borderRadius5 clearfix public-main" id="solit" >
+							<form class="form-horizontal">
+								
+								<div class="form-group">
+									<label for="" class="col-sm-2 control-label">姓名：</label>
+									<div class="col-sm-10">
+										<input type="text" class="form-control" id="" placeholder="请输入...">
+									</div>
+								</div>
+								
+								<div class="form-group">
+									<label for="" class="col-sm-2 control-label">微信号：</label>
+									<div class="col-sm-10">
+										<input type="text" class="form-control" id="" placeholder="请输入...">
+									</div>
+								</div>
+								
+								<div class="form-group">
+									<label for="" class="col-sm-2 control-label">手机号：</label>
+									<div class="col-sm-10">
+										<input type="text" class="form-control" id="" placeholder="请输入...">
+									</div>
+								</div>
+								
+								<div class="form-group">
+									<label for="" class="col-sm-2 control-label">邮箱：</label>
+									<div class="col-sm-10">
+										<input type="text" class="form-control" id="" placeholder="请输入...">
+									</div>
+								</div>
+								
+								<div class="form-group">
+									<label for="" class="col-sm-2 control-label">地址：</label>
+									<div class="col-sm-10">
+										<input type="text" class="form-control" id="" placeholder="请输入...">
+									</div>
+								</div>
+								
+								<div class="form-group">
+									<label for="" class="col-sm-2 control-label">团长级别：</label>
+									<div class="col-sm-10">
+										<input type="text" class="form-control" id="" placeholder="请输入...">
+									</div>
+								</div>
+								
+								<div class="form-group  public-table">
+									<label for="" class="col-sm-2 control-label">团长级别：</label>
+									<div class="col-sm-10">
+									    <table class="table table-hover table-bordered">
+											<thead>
+												<tr>
+													<th>发展团长姓名</th>
+													<th>电话</th>
+													<th>时间</th>
+													<th>操作</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>王静</td>
+													<td>电话</td>
+													<td>2012-12-12</td>
+													<td>
+														<button type="button" class="btn btn-primary">
+															<span class="glyphicon glyphicon-pencil"></span>&nbsp;修改
+														</button>
+														<button type="button" class="btn btn-danger">
+															<span class="glyphicon glyphicon-trash"></span>&nbsp;删除
+														</button>
+													</td>
+												</tr>	
+											</tbody>	
+										</table>
+										<button type="button" class="btn btn-success">
+											<span class="glyphicon glyphicon-plus-sign"></span>&nbsp;添加
+										</button>
+									</div>
+								</div>
+								
+								<div class="form-group">
+									<label for="" class="col-sm-2 control-label">身份证号：</label>
+									<div class="col-sm-10">
+										<input type="text" class="form-control" id="" placeholder="请输入...">
+									</div>
+								</div>
+								
+								<div class="form-group">
+									<label class="col-sm-2 control-label">身份证正面：</label>
+									<div class="col-sm-10">
+										<input id="file_zheng" type="file">
+									</div>
+								</div>
+								
+								<div class="form-group">
+									<label class="col-sm-2 control-label">身份证反面：</label>
+									<div class="col-sm-10">
+										<input id="file_fan" type="file">
+									</div>
+								</div>
+								<div class="form-group">
+								<button type="button" class="btn btn-success go-btn">保存</button>
+								</div>
+							</form>
+						</div>
+					</div>
+	</body>
+	<script type="application/javascript" src="https://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+	<script type="application/javascript" src="../../js/comment.js"></script>
+	<script type="application/javascript" src="../../bootstrap-3.3.7/js/bootstrap.min.js"></script>
+	<script type="application/javascript" src="../../js/fileinput.js"></script>
+	<script type="application/javascript">
+		$(function() {
+			$("#file_zheng").fileinput({
+				showUpload: false,
+				showCaption: false,
+				browseClass: "btn btn-primary btn-lg",
+				fileType: "any",
+				previewFileIcon: "<i class='glyphicon glyphicon-king'></i>"
+			});
+			$("#file_fan").fileinput({
+				showUpload: false,
+				showCaption: false,
+				browseClass: "btn btn-primary btn-lg",
+				fileType: "any",
+				previewFileIcon: "<i class='glyphicon glyphicon-king'></i>"
+			});
+		})
+	</script>
+</html>
+</strong>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>初美代理系统</title>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+		<meta http-equiv='content-script-type' content='text/javascript' />
+		<meta http-equiv='content-style-type' content='text/css' />
+		<meta http-equiv='content-language' content='zh' />
+		<link rel="stylesheet" type="text/css" href="../../bootstrap-3.3.7/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/global.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/layout.css" />
+		<link rel="stylesheet" type="text/css" href="../../bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css" />
+	</head>
+	<body>
+		<div id="main">
+			<h2 class="c77bfaf font22 content-title">新增接龙</h2>
+			<div class="clearfix borderRadius5 public-main" id="solit">
+				<form class="form-horizontal">
+					<div class="form-group">
+						<label for="inputEmail3" class="col-sm-2 control-label">接龙主题：</label>
+						<div class="col-sm-10">
+							<input type="email" class="form-control" id="inputEmail3" placeholder="接龙主题">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">接龙描述：</label>
+						<div class="col-sm-10">
+							<div id="editor"></div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">接龙商品：</label>
+						<div class="col-sm-10">
+							<div class="product-box">
+								<div class="product-main">
+									<table class="table">
+										<thead>
+											<tr>
+												<th>标题</th>
+												<th>创建时间</th>
+												<th></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<img src="../../img/product.jpg" />
+													玫瑰花
+												</td>
+												<td>
+													2018-12-13 06:34:23
+												</td>
+												<td>
+													<button type="button" class="btn btn-info">选取</button>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<img src="../../img/product.jpg" />
+													玫瑰花
+												</td>
+												<td>
+													2018-12-13 06:34:23
+												</td>
+												<td>
+													<button type="button" class="btn btn-info">选取</button>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<img src="../../img/product.jpg" />
+													玫瑰花
+												</td>
+												<td>
+													2018-12-13 06:34:23
+												</td>
+												<td>
+													<button type="button" class="btn btn-info">选取</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<!--分页-->
+									<div class="Page">
+										<nav aria-label="Page navigation">
+											<ul class="pagination">
+												<li>
+													<a href="#" aria-label="Previous">
+														<span aria-hidden="true">&laquo;</span>
+													</a>
+												</li>
+												<li><a href="#">1</a></li>
+												<li><a href="#">2</a></li>
+												<li><a href="#">3</a></li>
+												<li><a href="#">4</a></li>
+												<li><a href="#">5</a></li>
+												<li>
+													<a href="#" aria-label="Next">
+														<span aria-hidden="true">&raquo;</span>
+													</a>
+												</li>
+											</ul>
+										</nav>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">是否唯一：</label>
+						<div class="col-sm-10">
+							<label>
+								<input type="radio" name="inlineRadioOptions" value="option1"> 是
+							</label>
+							<label>
+								<input type="radio" name="inlineRadioOptions" value="option1">否
+							</label>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">是否限购：</label>
+						<div class="col-sm-10">
+							<label>
+								<input type="radio" name="inlineRadioOptions" value="option1"> 是
+							</label>
+							<label>
+								<input type="radio" name="inlineRadioOptions" value="option1">否
+							</label>
+							&nbsp;&nbsp;
+							每个ID限购&nbsp;<input type="text" class="form-control times">&nbsp;次
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">活动时间：</label>
+						<div class="col-sm-5">
+							<div class='input-group date' id='datetimepicker_start'>
+								<input type='text' readonly class="form-control" placeholder="开始时间" />
+								<span class="input-group-addon">
+									<span class="glyphicon glyphicon-calendar"></span>
+								</span>
+							</div>
+						</div>
+						<div class="col-sm-5">
+							<div class='input-group date' id="datetimepicker_end">
+								<input type='text' readonly class="form-control" placeholder="结束时间" />
+								<span class="input-group-addon">
+									<span class="glyphicon glyphicon-calendar"></span>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">是否分红：</label>
+						<div class="col-sm-10">
+							<label>
+								<input type="radio" name="fen" value="1" onclick="makeCheck()"> 不分红
+							</label>
+							&nbsp;
+							&nbsp;
+							<label>
+								<input type="radio" name="fen" value="2" onclick="makeCheck()">
+							</label>
+							&nbsp;
+							<label>
+								<select class="form-control" id="selectF" disabled>
+									<option>请选择拼团模版</option>
+									<option>是</option>
+									<option>否</option>
+								</select>
+							</label>
+						</div>
+					</div>
+					<button type="button" class="btn btn-success go-btn">保存</button>
+				</form>
+			</div>
+		</div>
+
+	</body>
+	<script type="application/javascript" src="https://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+	<script type="application/javascript" src="../../js/comment.js"></script>
+	<script type="application/javascript" src="../../bootstrap-3.3.7/js/bootstrap.min.js"></script>
+	<script type="application/javascript" src="../../bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.min.js"></script>
+	<script type="application/javascript" src="../../bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.zh-CN.js"></script>
+	<script type="application/javascript" src="../../js/wangEditor.min.js"></script>
+	<script type="application/javascript">
+		$(function() {
+			$('#datetimepicker_start').datetimepicker({
+				format: 'yyyy-mm-dd',
+				minView: "month",
+				language: 'zh-CN',
+				todayBtn: 1
+			});
+			$("#datetimepicker_end").datetimepicker({
+				format: "yyyy-mm-dd",
+				minView: "month",
+				language: 'zh-CN',
+				todayBtn: 1
+			});
+			var E = window.wangEditor;
+			var editor = new E('#editor');
+			editor.customConfig.uploadImgShowBase64 = true
+			editor.create()
+		})
+
+		//判断是否分红
+		function makeCheck() {
+			var selectV = $('input:radio[name="fen"]:checked').val();
+			if (selectV == 1) {
+				$("#selectF").attr("disabled", true);
+				return false
+			} else {
+				$("#selectF").attr("disabled", false);
+			}
+		}
+	</script>
+</html>
